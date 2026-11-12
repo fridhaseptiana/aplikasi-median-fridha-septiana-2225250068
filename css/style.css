@@ -999,3 +999,39 @@ button:active {
     font-size: 14px;
     opacity: 0.95;
 }
+.footer-aplikasi {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-aplikasi::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 0 auto 18px;
+    opacity: 0.8;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px;
+}
+
+nav button {
+    min-width: 110px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 480px) {
+    nav button {
+        min-width: 95px;
+        padding: 10px 14px;
+    }
+}
