@@ -673,3 +673,329 @@ main {
     }
 }
 
+/* ===== POLISH DESAIN APLIKASI ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav button,
+button {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+nav button:hover,
+button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.04);
+}
+
+.kartu,
+.soal,
+.contoh,
+.catatan {
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kartu:hover,
+.soal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(84, 121, 199, 0.13);
+}
+
+.rumus {
+    border-radius: 16px;
+    padding: 18px;
+    margin: 18px 0;
+}
+
+::selection {
+    background: #e5d5ff;
+    color: #49356f;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav button {
+        flex: 1;
+        min-width: 90px;
+    }
+
+    main {
+        padding: 16px;
+    }
+}
+/* ===== POLISH DESAIN APLIKASI ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav button,
+button {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+nav button:hover,
+button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.04);
+}
+
+.kartu,
+.soal,
+.contoh,
+.catatan {
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kartu:hover,
+.soal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(84, 121, 199, 0.13);
+}
+
+.rumus {
+    border-radius: 16px;
+    padding: 18px;
+    margin: 18px 0;
+}
+
+::selection {
+    background: #e5d5ff;
+    color: #49356f;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav button {
+        flex: 1;
+        min-width: 90px;
+    }
+
+    main {
+        padding: 16px;
+    }
+}
+header p {
+    font-size: 16px;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+    opacity: 0.95;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+.kartu-menu {
+    background: linear-gradient(135deg, #ffffff, #f3edff);
+    border: 1px solid #e6dcfa;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(84, 121, 199, 0.10);
+}
+
+.kartu-menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(84, 121, 199, 0.18);
+}
+nav button {
+    background: linear-gradient(135deg, #5479c7, #9276c9);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(84, 121, 199, 0.2);
+}
+
+nav button:hover {
+    background: linear-gradient(135deg, #9276c9, #5479c7);
+}
+.materi {
+    background: #ffffff;
+    border: 1px solid #eee5fa;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 5px 18px rgba(84, 121, 199, 0.08);
+}
+
+.judul-materi {
+    color: #5479c7;
+    font-weight: 800;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee5fa;
+}
+
+.materi p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+.contoh {
+    background: linear-gradient(135deg, #fffaff, #f0f5ff);
+    border-left: 5px solid #9276c9;
+    border-radius: 16px;
+    padding: 22px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(84, 121, 199, 0.08);
+}
+
+.contoh h3 {
+    color: #6d59a5;
+    margin-bottom: 12px;
+}
+
+.contoh p {
+    line-height: 1.8;
+}
+.soal {
+    background: linear-gradient(135deg, #ffffff, #f8f3ff);
+    border: 1px solid #e8def8;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 22px 0;
+    box-shadow: 0 5px 18px rgba(84, 121, 199, 0.09);
+}
+
+.soal h3 {
+    color: #5479c7;
+    margin-bottom: 14px;
+}
+
+.soal input {
+    border: 2px solid #ded3f2;
+    border-radius: 10px;
+    padding: 11px;
+    outline: none;
+}
+
+.soal input:focus {
+    border-color: #9276c9;
+    box-shadow: 0 0 0 3px rgba(146, 118, 201, 0.12);
+}
+button {
+    border-radius: 12px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#konten button {
+    background: linear-gradient(135deg, #5479c7, #9276c9);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    box-shadow: 0 4px 12px rgba(84, 121, 199, 0.18);
+}
+
+#konten button:hover {
+    filter: brightness(1.08);
+}
+.hasil,
+.hasil-jawaban {
+    background: linear-gradient(135deg, #f0f5ff, #f8f0ff);
+    border: 1px solid #e2d8f5;
+    border-radius: 18px;
+    padding: 22px;
+    margin-top: 20px;
+    color: #49356f;
+    line-height: 1.8;
+    box-shadow: 0 5px 15px rgba(84, 121, 199, 0.08);
+}
+
+.hasil h3,
+.hasil-jawaban h3 {
+    color: #5479c7;
+    margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+    header {
+        padding: 28px 16px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    nav button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .materi,
+    .contoh,
+    .soal,
+    .kartu-menu {
+        padding: 18px;
+        margin: 14px 0;
+    }
+
+    main {
+        width: 100%;
+        padding: 14px;
+    }
+}
+@keyframes munculHalus {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#konten {
+    animation: munculHalus 0.5s ease;
+}
+
+.materi,
+.contoh,
+.soal,
+.kartu-menu {
+    animation: munculHalus 0.6s ease;
+}
+.footer-aplikasi {
+    background: linear-gradient(135deg, #5479c7, #9276c9);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-radius: 20px 20px 0 0;
+}
+
+.footer-aplikasi h3 {
+    margin-bottom: 8px;
+    font-size: 21px;
+}
+
+.footer-aplikasi p {
+    margin: 5px 0;
+    font-size: 14px;
+    opacity: 0.95;
+}
