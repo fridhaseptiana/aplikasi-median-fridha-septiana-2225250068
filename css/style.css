@@ -1,75 +1,675 @@
+
+/* =====================================================
+   🌸 BELAJAR MEDIAN - KAWAII PASTEL DESIGN 🌸
+   Fridha Septiana | 2225250068
+   ===================================================== */
+
+/* 1. PENGATURAN DASAR */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pink: #ed91b8;
+    --pink-dark: #d76598;
+    --pink-light: #fff0f6;
+    --lavender: #b9a2e8;
+    --lavender-light: #f3edff;
+    --blue: #91c9e8;
+    --blue-light: #eaf7ff;
+    --cream: #fff5df;
+    --yellow: #ffe69a;
+    --green-light: #e7f8ec;
+    --text: #59485a;
+    --text-light: #88758a;
+    --white: #ffffff;
+    --shadow: 0 8px 25px rgba(192, 126, 164, 0.13);
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
-    color: #263238;
-    line-height: 1.6;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, #ffe3ef 0, transparent 22%),
+        radial-gradient(circle at 90% 30%, #e9e0ff 0, transparent 25%),
+        radial-gradient(circle at 15% 85%, #e0f4ff 0, transparent 25%),
+        #fff9fc;
+    color: var(--text);
+    line-height: 1.8;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
+/* 2. HEADER / KEPALA APLIKASI */
 header {
-    background-color: #5479c7;
-    color: white;
+    position: relative;
+    overflow: hidden;
     text-align: center;
-    padding: 30px 15px;
+    padding: 55px 20px 48px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #ee9cbe,
+        #c6a5ed,
+        #91cce8
+    );
+    box-shadow: 0 5px 20px rgba(195, 135, 178, 0.2);
+}
+
+header::before {
+    content: "✿  ✧  ♡  ✦  ✿";
+    position: absolute;
+    top: 12px;
+    left: 5%;
+    font-size: 25px;
+    opacity: 0.65;
+    letter-spacing: 12px;
+}
+
+header::after {
+    content: "♡  ✦  ✿  ✧  ♡";
+    position: absolute;
+    bottom: 10px;
+    right: 5%;
+    font-size: 24px;
+    opacity: 0.65;
+    letter-spacing: 10px;
 }
 
 header h1 {
+    font-size: clamp(30px, 5vw, 43px);
     margin-bottom: 8px;
+    font-weight: 900;
+    text-shadow: 2px 3px 0 rgba(130, 80, 140, 0.15);
+    letter-spacing: 1px;
 }
 
+header p {
+    font-size: 16px;
+    color: #fffaff;
+    font-weight: 600;
+}
+
+/* 3. NAVIGASI */
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
     padding: 15px;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.93);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid #f8d9e8;
+    box-shadow: 0 4px 15px rgba(190, 133, 166, 0.08);
 }
 
+nav button {
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    border: 2px solid #f5c6dc;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* 4. TOMBOL UMUM */
 button {
-    background-color: #5479c7;
+    background: linear-gradient(135deg, #ee9cbe, #bd9be9);
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 12px 22px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 15px;
+    font-family: inherit;
+    font-weight: bold;
+    box-shadow: 0 5px 12px rgba(203, 133, 177, 0.2);
+    transition: all 0.25s ease;
+    margin: 6px 4px;
 }
 
 button:hover {
-    background-color: #385da8;
+    transform: translateY(-3px) scale(1.02);
+    background: linear-gradient(135deg, #dc79a6, #a989dd);
+    box-shadow: 0 8px 18px rgba(203, 133, 177, 0.3);
 }
 
+button:active {
+    transform: scale(0.97);
+}
+
+nav button:hover {
+    color: white;
+    background: linear-gradient(135deg, #ee9cbe, #bd9be9);
+    border-color: transparent;
+}
+
+/* 5. AREA KONTEN UTAMA */
 main {
-    max-width: 800px;
-    margin: 25px auto;
-    padding: 25px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    max-width: 1050px;
+    width: calc(100% - 36px);
+    margin: 32px auto;
+    padding: clamp(20px, 4vw, 38px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #f8e3ee;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    min-height: 400px;
+}
+
+main::after {
+    content: "✿";
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    color: #efb4d0;
+    font-size: 27px;
+    pointer-events: none;
 }
 
 main h2 {
-    color: #5479c7;
+    color: var(--pink-dark);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+main h3 {
+    color: #9a79cb;
     margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+main h4 {
+    color: #d16d9d;
+    margin: 18px 0 8px;
 }
 
 main p {
     margin-bottom: 12px;
 }
 
-@media (max-width: 600px) {
+main ul,
+main ol {
+    padding-left: 27px;
+    margin: 12px 0 18px;
+}
+
+main li {
+    padding-left: 4px;
+    margin-bottom: 7px;
+}
+
+main li::marker {
+    color: var(--pink);
+}
+
+/* 6. BERANDA */
+.hero-belajar {
+    text-align: center;
+    padding: 38px 25px;
+    margin-bottom: 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #fff0f6, #f1eaff, #eaf7ff);
+    border: 2px dashed #eab9d3;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-belajar::before {
+    content: "🌸";
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-size: 28px;
+}
+
+.hero-belajar::after {
+    content: "🦋";
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    font-size: 27px;
+}
+
+.hero-belajar h2 {
+    font-size: clamp(24px, 4vw, 34px);
+    color: #ca6e9b;
+    margin: 12px 0;
+}
+
+.hero-belajar h3 {
+    color: #9375c5;
+    margin: 15px 0;
+}
+
+.hero-belajar p {
+    max-width: 720px;
+    margin: 10px auto;
+}
+
+.hero-belajar button {
+    margin-top: 15px;
+}
+
+/* 7. KARTU MENU */
+.kartu-menu {
+    margin: 25px 0;
+}
+
+.kartu {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 14px);
+    min-width: 240px;
+    padding: 24px;
+    margin: 8px 5px;
+    background: linear-gradient(145deg, #fff1f7, #f4efff);
+    border: 2px solid #f4d8e8;
+    border-radius: 22px;
+    box-shadow: 0 5px 15px rgba(190, 130, 169, 0.1);
+    transition: 0.3s;
+}
+
+.kartu:nth-of-type(even) {
+    background: linear-gradient(145deg, #edf8ff, #f0edff);
+    border-color: #d8e8f7;
+}
+
+.kartu:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* 8. TUJUAN PEMBELAJARAN */
+.tujuan {
+    background: #fff9e9;
+    border: 2px solid #f8e3ac;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 25px 0;
+}
+
+.tujuan h2 {
+    color: #bd8b42;
+}
+
+/* 9. PESAN MOTIVASI */
+.pesan-motivasi {
+    background: linear-gradient(135deg, #fce9f4, #eae8ff);
+    border-radius: 20px;
+    border: 2px dashed #dcb4e4;
+    padding: 25px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.pesan-motivasi h3 {
+    color: #bd70a7;
+}
+
+/* 10. JUDUL MATERI */
+.judul-materi {
+    text-align: center;
+    padding: 25px 18px;
+    background: linear-gradient(135deg, #ffeaf3, #eee8ff, #e8f7ff);
+    border-radius: 20px;
+    margin-bottom: 28px;
+    border: 2px solid #f3d9ec;
+}
+
+.judul-materi h2 {
+    color: #bd6e9e;
+    font-size: clamp(22px, 4vw, 30px);
+}
+
+/* 11. KARTU MATERI */
+.materi {
+    padding: 25px;
+    margin: 22px 0;
+    background: #ffffff;
+    border: 1px solid #f1dce9;
+    border-left: 6px solid #e99abd;
+    border-radius: 17px;
+    box-shadow: 0 5px 15px rgba(184, 132, 163, 0.08);
+    transition: transform 0.25s;
+}
+
+.materi:hover {
+    transform: translateX(3px);
+}
+
+.materi:nth-of-type(even) {
+    border-left-color: #b8a1e4;
+}
+
+.materi:nth-of-type(3n) {
+    border-left-color: #92cbe5;
+}
+
+.materi h3 {
+    font-size: 19px;
+}
+
+/* 12. KOTAK RUMUS */
+.rumus {
+    padding: 18px;
+    margin: 15px 0;
+    background: linear-gradient(135deg, #f4edff, #fff0f7);
+    color: #855eaa;
+    border: 2px dashed #c7a9e8;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* 13. KOTAK CONTOH */
+.contoh {
+    padding: 20px;
+    margin: 17px 0;
+    background: #f0f9ff;
+    border: 2px solid #c9e8f7;
+    border-radius: 16px;
+}
+
+.contoh strong {
+    color: #578db2;
+}
+
+/* 14. KOTAK CATATAN */
+.catatan {
+    padding: 18px;
+    margin: 18px 0;
+    background: #fff8e5;
+    border-left: 5px solid #f0c96c;
+    border-radius: 12px;
+    color: #806a43;
+}
+
+/* 15. KOTAK HASIL */
+.hasil {
+    padding: 23px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #eaf9ef, #f0faff);
+    border: 2px solid #bde6ce;
+    border-radius: 18px;
+    color: #397b58;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 16. TABEL STATISTIKA */
+.tabel-median {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 18px 0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(185, 136, 167, 0.1);
+    font-size: 14px;
+}
+
+.tabel-median th {
+    background: linear-gradient(135deg, #e99abb, #b9a1e4);
+    color: white;
+    padding: 13px 10px;
+    text-align: center;
+}
+
+.tabel-median td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #f3e3ed;
+    background: #fffafd;
+}
+
+.tabel-median tr:nth-child(even) td {
+    background: #f5f0ff;
+}
+
+.tabel-median tr:last-child td {
+    font-weight: bold;
+    color: #a35e90;
+}
+
+/* 17. LATIHAN SOAL */
+.soal {
+    background: linear-gradient(145deg, #fff4f8, #f4f0ff);
+    border: 2px solid #f0d5e7;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 22px 0;
+    box-shadow: 0 5px 15px rgba(188, 132, 168, 0.09);
+}
+
+.soal h3 {
+    color: #c86d9b;
+}
+
+.data-soal {
+    display: block;
+    text-align: center;
+    background: white;
+    border: 2px dashed #d6b6e8;
+    border-radius: 15px;
+    padding: 17px;
+    margin: 17px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8b6bb3;
+    letter-spacing: 1px;
+}
+
+.soal label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #956eae;
+}
+
+.soal input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid #e6c9df;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--text);
+    background: white;
+    outline: none;
+    transition: 0.2s;
+}
+
+.soal input:focus {
+    border-color: #c09ce4;
+    box-shadow: 0 0 0 4px rgba(192, 156, 228, 0.15);
+}
+
+.hasil-jawaban {
+    padding: 13px;
+    margin-top: 15px;
+    background: white;
+    border-radius: 12px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* 18. HASIL AKHIR KUIS */
+#nilaiAkhir {
+    margin-top: 25px;
+}
+
+#nilaiAkhir h2 {
+    color: #4f956e;
+}
+
+#nilaiAkhir h3 {
+    font-size: 35px;
+    color: #d16f9e;
+}
+
+/* 19. LINK DAN ELEMEN LAIN */
+a {
+    color: #bd6e9e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input::placeholder {
+    color: #b9a7b9;
+}
+
+/* 20. ANIMASI HALUS */
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: muncul 0.45s ease;
+}
+
+.materi,
+.soal,
+.kartu,
+.catatan,
+.contoh,
+.hasil {
+    animation: muncul 0.4s ease;
+}
+
+/* 21. RESPONSIVE UNTUK TABLET */
+@media (max-width: 800px) {
     main {
-        margin: 15px;
-        padding: 20px;
+        width: calc(100% - 28px);
+        padding: 22px;
+    }
+
+    .kartu {
+        width: calc(50% - 14px);
+    }
+}
+
+/* 22. RESPONSIVE UNTUK HP ANDROID DAN IPHONE */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 42px 15px;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    nav {
+        gap: 7px;
+        padding: 11px 7px;
     }
 
     nav button {
         flex: 1;
+        padding: 10px 8px;
+        font-size: 13px;
+        margin: 2px;
+    }
+
+    main {
+        width: calc(100% - 22px);
+        margin: 15px auto;
+        padding: 17px;
+        border-radius: 18px;
+    }
+
+    main h2 {
+        font-size: 21px;
+    }
+
+    main h3 {
+        font-size: 17px;
+    }
+
+    .hero-belajar {
+        padding: 28px 16px;
+    }
+
+    .hero-belajar h2 {
+        font-size: 24px;
+    }
+
+    .kartu {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        margin: 12px 0;
+    }
+
+    .materi {
+        padding: 18px;
+        margin: 17px 0;
+    }
+
+    .rumus {
+        font-size: 14px;
+        padding: 14px 9px;
+    }
+
+    .tabel-median {
+        font-size: 12px;
+    }
+
+    .tabel-median th,
+    .tabel-median td {
+        padding: 9px 5px;
+        overflow-wrap: anywhere;
+    }
+
+    .data-soal {
+        font-size: 17px;
+    }
+
+    .soal {
+        padding: 17px;
+    }
+
+    button {
+        max-width: 100%;
+        font-size: 13px;
+        padding: 11px 16px;
     }
 }
+
+/* 23. MENGHORMATI PREFERENSI GERAK PENGGUNA */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
