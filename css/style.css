@@ -2325,3 +2325,482 @@ select:focus-visible {
         width: 100%;
     }
 }
+
+/* =====================================================
+   PENGEMBANGAN TAMPILAN MATERI MEDIAN
+   Pastel Blue - Lavender - Soft Pink
+   ===================================================== */
+
+.halaman-materi {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 30px;
+    color: #38415c;
+    line-height: 1.8;
+}
+
+.halaman-materi > h2 {
+    color: #596caa;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.halaman-materi > p {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 25px;
+    color: #68718a;
+}
+
+.kartu-materi {
+    background: linear-gradient(135deg, #ffffff, #f5f3ff);
+    border: 1px solid #e4e1f8;
+    border-left: 6px solid #a6a6e8;
+    border-radius: 18px;
+    padding: 28px;
+    margin: 25px 0;
+    box-shadow: 0 6px 20px rgba(113, 119, 174, 0.09);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kartu-materi:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(113, 119, 174, 0.15);
+}
+
+.kartu-materi h3 {
+    color: #6474b4;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.kartu-materi h4 {
+    color: #bd7da5;
+    margin: 18px 0 8px;
+}
+
+.kartu-materi p {
+    margin: 10px 0;
+}
+
+.kartu-materi ul {
+    padding-left: 25px;
+    margin: 12px 0;
+}
+
+.kartu-materi li {
+    margin-bottom: 8px;
+}
+
+.rumus-median {
+    background: #ecebff;
+    color: #555e9e;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.contoh-data {
+    background: #fff0f6;
+    color: #a45e87;
+    padding: 13px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+
+.kesimpulan-materi {
+    background: #eaf7f5;
+    border-radius: 12px;
+    padding: 16px;
+    color: #417e78;
+    font-weight: bold;
+    margin-top: 18px !important;
+}
+
+.halaman-materi > button {
+    display: block;
+    margin: 35px auto 10px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #929fe0, #c49bd4);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.halaman-materi > button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(146, 159, 224, 0.3);
+}
+
+@media (max-width: 600px) {
+    .halaman-materi {
+        padding: 18px;
+        margin: 15px auto;
+    }
+
+    .halaman-materi > h2 {
+        font-size: 24px;
+    }
+
+    .kartu-materi {
+        padding: 20px;
+    }
+
+    .kartu-materi h3 {
+        font-size: 19px;
+    }
+
+    .rumus-median,
+    .contoh-data {
+        font-size: 16px;
+    }
+}
+
+/* =====================================================
+   AKTIVITAS RMT - DESAIN PASTEL
+   ===================================================== */
+
+.halaman-rmt {
+    max-width: 1050px;
+    margin: 35px auto;
+    padding: 25px;
+    color: #46506a;
+    line-height: 1.8;
+}
+
+.rmt-header {
+    text-align: center;
+    padding: 35px 25px;
+    margin-bottom: 25px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #e7efff, #f5e9ff, #fff0f6);
+}
+
+.rmt-header h2 {
+    color: #6878b6;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.rmt-header p {
+    max-width: 750px;
+    margin: auto;
+    color: #707991;
+}
+
+.label-rmt {
+    display: inline-block;
+    color: #9a7dbb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.kartu-rmt {
+    background: #ffffff;
+    border: 1px solid #e9e7f5;
+    border-radius: 20px;
+    padding: 28px;
+    margin: 25px 0;
+    box-shadow: 0 6px 22px rgba(104, 120, 182, 0.08);
+}
+
+.kartu-rmt h3 {
+    color: #6878b6;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.kartu-rmt h4 {
+    color: #ad79a6;
+    margin: 24px 0 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #f0e7f2;
+}
+
+.kartu-rmt p {
+    margin: 12px 0;
+}
+
+.kartu-rmt ol,
+.kartu-rmt ul {
+    padding-left: 25px;
+    margin: 12px 0;
+}
+
+.kartu-rmt li {
+    margin-bottom: 8px;
+}
+
+.tujuan-rmt {
+    background: linear-gradient(135deg, #f2f5ff, #ffffff);
+}
+
+.petunjuk-rmt {
+    background: linear-gradient(135deg, #fff4f8, #ffffff);
+    border-left: 6px solid #e8a9ca;
+}
+
+.konteks-rmt {
+    background: linear-gradient(135deg, #f1f9ff, #ffffff);
+    border-left: 6px solid #9eb9e9;
+}
+
+.data-median {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.data-median span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background: #e9edff;
+    color: #6676b5;
+    border: 1px solid #d9def7;
+    border-radius: 16px;
+    font-size: 21px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(104, 120, 182, 0.08);
+}
+
+.pertanyaan-utama {
+    background: #fff0f6;
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: 22px;
+    color: #9c6588;
+}
+
+.pertanyaan-utama p {
+    margin-bottom: 0;
+}
+
+.tahap-input {
+    border-top: 6px solid #9eb9e9;
+}
+
+.tahap-elaboration {
+    border-top: 6px solid #b9a3e5;
+}
+
+.tahap-output {
+    border-top: 6px solid #e8a9ca;
+}
+
+.judul-tahap {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 20px;
+}
+
+.judul-tahap h3 {
+    margin: 3px 0;
+}
+
+.nomor-tahap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #edf0ff;
+    color: #7181bb;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tujuan-tahap {
+    background: #f5f3ff;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 18px 0;
+    color: #716c9d;
+}
+
+.halaman-rmt label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #515b78;
+    font-weight: 600;
+}
+
+.halaman-rmt input,
+.halaman-rmt textarea {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dcdff0;
+    border-radius: 12px;
+    background: #fcfcff;
+    color: #46506a;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.halaman-rmt textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.halaman-rmt input:focus,
+.halaman-rmt textarea:focus {
+    border-color: #a9a8df;
+    box-shadow: 0 0 0 3px rgba(169, 168, 223, 0.15);
+    background: #ffffff;
+}
+
+.halaman-rmt input::placeholder,
+.halaman-rmt textarea::placeholder {
+    color: #a7adc0;
+}
+
+.refleksi-tahap {
+    background: #fff6fa;
+    border-left: 4px solid #e6a8c8;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 22px;
+    color: #916b89;
+}
+
+.refleksi-tahap p {
+    margin-bottom: 0;
+}
+
+.rangkuman-rmt {
+    background: linear-gradient(135deg, #f5f3ff, #fff3f8);
+}
+
+.ringkasan-rmt {
+    background: #ffffff;
+    padding: 16px;
+    margin: 13px 0;
+    border-radius: 12px;
+    border-left: 4px solid #b6a6df;
+}
+
+.ringkasan-rmt strong {
+    color: #8172b2;
+}
+
+.ringkasan-rmt p {
+    margin-bottom: 0;
+}
+
+.aksi-rmt {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 30px 0;
+}
+
+.aksi-rmt button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.tombol-simpan-rmt {
+    background: linear-gradient(135deg, #8298d4, #aa9bd9);
+}
+
+.tombol-reset-rmt {
+    background: linear-gradient(135deg, #d99ebc, #e8b2c7);
+}
+
+.aksi-rmt button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(104, 120, 182, 0.2);
+}
+
+.pesan-rmt {
+    padding: 22px;
+    border-radius: 16px;
+    margin: 20px 0;
+}
+
+.pesan-rmt h3 {
+    margin-bottom: 10px;
+}
+
+.pesan-rmt p {
+    margin: 8px 0;
+}
+
+.pesan-berhasil {
+    background: #eaf7f2;
+    border: 1px solid #cce9dc;
+    color: #477c69;
+}
+
+.pesan-peringatan {
+    background: #fff5e9;
+    border: 1px solid #f3dfbd;
+    color: #98713e;
+}
+
+@media (max-width: 600px) {
+    .halaman-rmt {
+        padding: 14px;
+        margin: 15px auto;
+    }
+
+    .rmt-header {
+        padding: 25px 16px;
+    }
+
+    .rmt-header h2 {
+        font-size: 24px;
+    }
+
+    .kartu-rmt {
+        padding: 19px;
+    }
+
+    .data-median {
+        gap: 8px;
+    }
+
+    .data-median span {
+        width: 48px;
+        height: 48px;
+        font-size: 17px;
+    }
+
+    .aksi-rmt {
+        flex-direction: column;
+    }
+
+    .aksi-rmt button {
+        width: 100%;
+    }
+}

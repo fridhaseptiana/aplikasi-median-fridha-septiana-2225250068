@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Media pembelajaran statistika interaktif untuk memahami konsep Median dengan pendekatan Rigorous Mathematical Thinking (RMT).">
+
+    <meta name="description"
+        content="Media pembelajaran statistika interaktif materi Median berbasis Rigorous Mathematical Thinking (RMT).">
 
     <title>Belajar Median | Media Pembelajaran Statistika</title>
 
     <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
 </head>
 
 <body>
@@ -30,34 +33,52 @@
             Materi
         </button>
 
-        <button onclick="tampilkanHalaman('latihan')">
-            Latihan Soal
+        <button onclick="tampilkanHalaman('rmt')">
+            Aktivitas RMT
         </button>
+
+        <button onclick="tampilkanHalaman('latihan')">
+            Latihan Literasi Matematika
+        </button>
+
+<button onclick="tampilkanHalaman('soal')">
+    Latihan Soal
+</button>
 
         <button onclick="tampilkanHalaman('ai')">
             AI Tutor
+        </button>
+
+        <button onclick="tampilkanHalaman('hasil')">
+            Hasil dan Refleksi
         </button>
     </nav>
 
     <!-- KONTEN UTAMA -->
     <main id="konten">
 
+        <!-- BERANDA -->
         <section class="halaman-beranda">
             <h2>Selamat Datang di Belajar Median!</h2>
 
             <p>
-                Yuk, pelajari konsep median atau nilai tengah
-                melalui materi interaktif, contoh soal, dan latihan
-                yang membantu mengembangkan kemampuan berpikir
-                matematis.
+                Selamat datang di media pembelajaran statistika
+                interaktif. Melalui aplikasi ini, kamu akan
+                mempelajari konsep median dengan pendekatan
+                Rigorous Mathematical Thinking (RMT).
             </p>
 
             <p>
-                Dalam aplikasi ini, kamu tidak hanya belajar
-                menghitung median, tetapi juga memahami,
-                menganalisis, dan menjelaskan proses penyelesaian
-                masalah matematika.
+                Kamu tidak hanya belajar menghitung median,
+                tetapi juga berlatih memahami permasalahan,
+                mengembangkan strategi penyelesaian,
+                memberikan alasan matematis, dan membuat
+                kesimpulan berdasarkan hasil perhitungan.
             </p>
+
+            <button onclick="tampilkanHalaman('materi')">
+                Mulai Belajar
+            </button>
         </section>
 
     </main>
@@ -76,7 +97,8 @@
     </footer>
 
     <!-- JAVASCRIPT -->
-    <script src="js/app.js"></script>
-
+    <script src="js/rmt.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
