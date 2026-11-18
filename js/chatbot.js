@@ -88,43 +88,50 @@ async function kirimPesanChatbot() {
     );
 
     try {
-        const API_KEY = "MASUKKAN_API_KEY_GEMINI";
-        const MODEL = "gemini-3.5-flash-lite";
+        const APP_SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbwe1JbBA3XW7dnTioNUh7W5M4I1-_2OeXH6yr1sgUDoru3bjUTvMK3Gnv7PM_BzHamg4w/exec";
 
-        const response = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`,
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    contents: [{
-                        parts: [{
-                            text: `Kamu adalah AI Tutor dalam aplikasi Belajar Median untuk siswa SMP. Jawab dengan bahasa Indonesia yang ramah, sederhana, dan mudah dipahami. Pertanyaan: ${pertanyaan}`
-                        }]
+        const response = await fetch(APP_SCRIPT_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify({
+                systemInstruction: {
+                    parts: [{
+                        text: `Kamu adalah AI Tutor dalam aplikasi Belajar Median untuk siswa SMP. 
+                        Jawab menggunakan bahasa Indonesia yang ramah, sederhana, 
+                        sabar, dan mudah dipahami. Fokus pada materi statistika 
+                        khususnya median. Berikan contoh jika diperlukan.`
                     }]
-                })
-            }
-        );
+                },
+                contents: [{
+                    role: "user",
+                    parts: [{
+                        text: pertanyaan
+                    }]
+                }],
+                generationConfig: {
+                    temperature: 0.7,
+                    maxOutputTokens: 1024
+                }
+            })
+        });
 
         const data = await response.json();
 
-        if (!response.ok) {
-            throw new Error(data.error?.message || "Gemini gagal merespons.");
+        if (!data.sukses) {
+            throw new Error(
+                data.pesan || "AI Tutor gagal memberikan jawaban."
+            );
         }
 
-        const jawaban =
-            data.candidates?.[0]?.content?.parts?.[0]?.text ||
-            "Maaf, AI Tutor belum bisa memberikan jawaban.";
-
-        pesanLoading.textContent = jawaban;
+        pesanLoading.textContent = data.jawaban;
 
     } catch (error) {
         pesanLoading.textContent =
             "Terjadi kesalahan: " + error.message;
     }
 }
-
 
 document.addEventListener("DOMContentLoaded", buatTampilanChatbot);
